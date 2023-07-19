@@ -5,6 +5,7 @@ const cors = require('cors')
 
 
 const userRoutes = require('./routes/userRoutes');
+const createRoutes = require('./routes/createRoutes');
 
 
 const app = express()
@@ -18,6 +19,7 @@ app.use(cors());
 
 //routes
 app.use('/api/user', userRoutes);
+app.use('/api', createRoutes);
 
 mongoose.set('strictQuery', true);
 mongoose.connect(MONGODB_URI)
