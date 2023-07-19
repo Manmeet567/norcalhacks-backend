@@ -5,7 +5,10 @@ const createEvent = async (req,res) => {
     const obj = req.body;
     try{
         console.log(obj)
-        res.status(200).json({"recieved":"true"})
+
+        const event = await Event.create({title:obj.title, desc:obj.desc, location:obj.location, startTime:obj.startTime, endTime:obj.endTime})
+
+        res.status(200).json({event})
     }
     catch(err){
         console.log(err)
