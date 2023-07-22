@@ -6,7 +6,7 @@ const createEvent = async (req,res) => {
     try{
         console.log(obj)
 
-        const event = await Event.create({title:obj.title, desc:obj.desc, location:obj.location, startTime:obj.startTime, endTime:obj.endTime})
+        const event = await Event.create({title:obj.title, desc:obj.desc, location:obj.location, startTime:obj.startTime, endTime:obj.endTime, author:obj.author})
 
         res.status(200).json({event})
     }
