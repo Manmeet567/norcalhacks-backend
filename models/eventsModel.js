@@ -22,6 +22,10 @@ const eventSchema = new Schema({
     endTime:{
         type:Date,
         required:true
+    },
+    author:{
+        type:String,
+        required:true
     }
 }, {timestamps:true})
 
