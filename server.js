@@ -14,7 +14,8 @@ const PORT = 4000 || process.env.PORT
 const MONGODB_URI = process.env.MONGODB_URI
 
 const corsOptions = {
-   origin: "https://tiny-hummingbird-8f6e3f.netlify.app/"
+   origin: "https://tiny-hummingbird-8f6e3f.netlify.app/",
+   optionsSuccessStatus: 200
 }
 
 //middlewares
