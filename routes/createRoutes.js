@@ -1,5 +1,5 @@
 const express = require("express")
-const { createEvent } = require('../controllers/createControllers');
+const { createEvent, getEvents } = require('../controllers/createControllers');
 const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router()
@@ -10,7 +10,7 @@ router.use(requireAuth)
 //createEvent route
 router.post('/createEvent', createEvent)
 
-//share post route
-// router.post('/sharePost', sharePost)
+//get events route
+router.get('/getEvents', getEvents)
 
 module.exports = router
