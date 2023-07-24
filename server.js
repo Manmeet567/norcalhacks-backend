@@ -14,12 +14,12 @@ const PORT = 4000 || process.env.PORT
 const MONGODB_URI = process.env.MONGODB_URI
 
 const corsOptions = {
-   origin: ""
+   origin: "https://taurite.onrender.com/"
 }
 
 //middlewares
 app.use(express.json())
-app.use(cors());
+app.use(cors(corsOptions));
 
 //routes
 app.use('/api/user', userRoutes);
