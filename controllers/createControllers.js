@@ -16,6 +16,18 @@ const createEvent = async (req,res) => {
     }
 }
 
+const getEvents = async (req,res) => {
+    try{
+        const events = await Event.find()
+        res.status(200).json(events)
+    }
+    catch(err){
+        console.log(err)
+        res.status(401).json({error:err})
+    }
+}
+
 module.exports = {
-    createEvent
+    createEvent,
+    getEvents
 }
